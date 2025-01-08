@@ -1,8 +1,8 @@
 function startAdventure() {
+    console.log("Adventure started!");  // Debugging line
     const storyText = document.getElementById("story-text");
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
-
     storyText.innerText = "You are at the entrance of a dense forest. Do you enter or turn back?";
     button1.innerText = "Enter the forest";
     button2.innerText = "Turn back";
