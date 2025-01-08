@@ -199,7 +199,39 @@ function showScenario11B() {
     button2.onclick = showScenario19B;
 }
 
-// Add more scenarios as needed...
+// Scenario 12A: Step through the portal
+function showScenario12A() {
+    storyText.innerText = "You step through the portal and find yourself in a magical world filled with strange creatures and enchanted objects!";
+    button1.innerText = "Talk to a creature";
+    button2.innerText = "Explore the surroundings";
+    button1.onclick = showScenario20A;
+    button2.onclick = showScenario20B;
+}
 
-// Start the story
-startAdventure();
+// Scenario 12B: Leave the portal alone
+function showScenario12B() {
+    storyText.innerText = "You leave the portal and continue your journey, finding a safe path home.";
+    button1.innerText = "End the journey";
+    button2.style.display = "none";
+    button1.onclick = startAdventure;
+}
+
+// Scenario 13A: Fight the animal
+function showScenario13A() {
+    storyText.innerText = "You fight the animal bravely and manage to scare it away!";
+    button1.innerText = "Continue exploring";
+    button2.innerText = "Head back to the village";
+    button1.onclick = showScenario20A;
+    button2.onclick = showScenario15A;
+}
+
+// Scenario 13B: Run away
+function showScenario13B() {
+    storyText.innerText = "You decide to run away and find a safe hiding place.";
+    button1.innerText = "Continue your journey";
+    button2.innerText = "Return to the village";
+    button1.onclick = showScenario20B;
+    button2.onclick = showScenario15B;
+}
+
+// Scenario
