@@ -127,3 +127,5 @@ function avoidCreatures() {
     button1.onclick = restInMeadow;
     button2.onclick = continueExploring;
 }
+
+// Further scenario functions can be added similarly...
