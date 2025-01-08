@@ -1,12 +1,16 @@
+// This function is called when the "Start the Adventure" button is clicked
+document.getElementById("button1").onclick = startAdventure;
+
 function startAdventure() {
-    console.log("Adventure started!");  // Debugging line
     const storyText = document.getElementById("story-text");
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
+
+    // Initial Story Text
     storyText.innerText = "You are at the entrance of a dense forest. Do you enter or turn back?";
     button1.innerText = "Enter the forest";
     button2.innerText = "Turn back";
-    button2.style.display = "inline";
+    button2.style.display = "inline"; // Make button2 visible
 
     button1.onclick = enterForest;
     button2.onclick = turnBack;
@@ -68,34 +72,6 @@ function followPath() {
     button2.onclick = avoidCreatures;
 }
 
-// Scenario 2C: Explore the village
-function exploreVillage() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "The villagers welcome you and offer a map of the forest.";
-    button1.innerText = "Take the map";
-    button2.innerText = "Decline the map";
-
-    button1.onclick = takeMap;
-    button2.onclick = declineMap;
-}
-
-// Scenario 2D: Sit by the lake
-function sitByLake() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "You find a bottle floating in the water. Inside is a mysterious note.";
-    button1.innerText = "Read the note";
-    button2.innerText = "Ignore the note";
-
-    button1.onclick = readNote;
-    button2.onclick = ignoreNote;
-}
-
 // Scenario 3A: Take the artifact
 function takeArtifact() {
     const storyText = document.getElementById("story-text");
@@ -148,65 +124,6 @@ function avoidCreatures() {
     button1.innerText = "Rest in the meadow";
     button2.innerText = "Continue exploring";
 
-    button1.onclick = restMeadow;
-    button2.onclick = exploreFurther;
+    button1.onclick = restInMeadow;
+    button2.onclick = continueExploring;
 }
-
-// Scenario 3E: Take the map
-function takeMap() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "The map shows a secret passage in the forest. What do you do?";
-    button1.innerText = "Follow the map";
-    button2.innerText = "Ignore it";
-
-    button1.onclick = followMap;
-    button2.onclick = ignoreMap;
-}
-
-// Scenario 3F: Decline the map
-function declineMap() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "Without the map, you wander aimlessly and find yourself at a crossroads: a dark trail or a sunny meadow.";
-    button1.innerText = "Take the dark trail";
-    button2.innerText = "Head to the sunny meadow";
-
-    button1.onclick = darkTrail;
-    button2.onclick = sunnyMeadow;
-}
-
-// Scenario 3G: Read the note
-function readNote() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "The note contains a riddle: 'To find the greatest treasure, seek the tree that touches the stars.' What do you do?";
-    button1.innerText = "Search for the tree";
-    button2.innerText = "Ignore the riddle";
-
-    button1.onclick = searchTree;
-    button2.onclick = ignoreRiddle;
-}
-
-// Scenario 3H: Ignore the note
-function ignoreNote() {
-    const storyText = document.getElementById("story-text");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-
-    storyText.innerText = "You walk away from the lake, but you hear a faint whisper calling your name. What do you do?";
-    button1.innerText = "Follow the whisper";
-    button2.innerText = "Run away";
-
-    button1.onclick = followWhisper;
-    button2.onclick = runAway;
-}
-
-// Additional paths and actions would continue here...
-// You would implement the remaining options and scenarios following the same structure.
