@@ -8,22 +8,27 @@ body {
 
 h1 {
     color: #0059b3;
+    margin-top: 20px;  /* Add spacing from the top */
 }
 
 #story-text {
     font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1.6;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 1.2em;
     margin: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
+    display: inline-block;  /* Make sure buttons are inline but have some space */
+    width: 200px;  /* Fix button width for consistent alignment */
 }
 
 button:hover {
@@ -32,4 +37,15 @@ button:hover {
 
 button:disabled {
     background-color: #ccc;
+}
+
+button + button {
+    margin-left: 10px; /* Adds space between buttons */
+}
+
+/* Add responsiveness for smaller screens */
+@media screen and (max-width: 600px) {
+    button {
+        width: 80%;  /* Buttons will take up 80% of the screen width on small devices */
+    }
 }
